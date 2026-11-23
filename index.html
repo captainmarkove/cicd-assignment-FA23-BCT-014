@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CI/CD Assignment - FA23-BCT-014</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #eef3fb; margin: 0; padding: 40px; color: #0a1f4d; }
+    .card { max-width: 560px; margin: 0 auto; background: #fff; border-top: 8px solid #0a2463; padding: 28px 32px; box-shadow: 0 2px 10px rgba(0,0,0,.1); }
+    h1 { color: #0a2463; margin-top: 0; }
+    .info { color: #1f5fd6; font-weight: bold; }
+    button { background: #1f5fd6; color: #fff; border: 0; padding: 10px 18px; cursor: pointer; font-size: 15px; }
+    input { padding: 9px; width: 260px; font-size: 15px; border: 1px solid #8fb8f2; }
+    #message, #output { margin-top: 12px; font-weight: bold; }
+    hr { border: 0; border-top: 1px solid #bcd3f7; margin: 22px 0; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1 id="heading">CI/CD Pipeline Demo</h1>
+    <p class="info" id="student">Jamshaid Fareed | FA23-BCT-014</p>
+
+    <button id="msg-btn">Click Me</button>
+    <div id="message"></div>
+
+    <hr>
+
+    <input type="text" id="user-text" placeholder="Type something here">
+    <button id="submit-btn">Submit</button>
+    <div id="output"></div>
+  </div>
+
+  <script>
+    document.getElementById("msg-btn").addEventListener("click", function () {
+      document.getElementById("message").textContent = "Hello from Jamshaid Fareed!";
+    });
+    document.getElementById("submit-btn").addEventListener("click", function () {
+      var text = document.getElementById("user-text").value;
+      document.getElementById("output").textContent = "You entered: " + text;
+    });
+  </script>
+</body>
+</html>
